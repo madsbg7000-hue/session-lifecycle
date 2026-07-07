@@ -27,7 +27,7 @@ Five slash commands:
 1. **Install** (as a plugin marketplace):
 
    ```
-   /plugin marketplace add USERNAME/session-lifecycle
+   /plugin marketplace add madsbg7000-hue/session-lifecycle
    /plugin install session-lifecycle
    ```
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Give your AI assistant a memory that survives across sessions. Five commands scaffold and drive a session loop over an Obsidian vault: /session-setup builds the folder skeleton, /session-start briefs you from persisted state, /session-track logs progress mid-session, /session-close writes reflection + log + state + next-session starter + daily note, and /session-handoff produces a compact handoff for a fresh agent.",
   "author": { "name": "Mads Graversen" },
-  "homepage": "https://github.com/USERNAME/session-lifecycle",
+  "homepage": "https://github.com/madsbg7000-hue/session-lifecycle",
   "license": "MIT",
   "keywords": ["session","lifecycle","obsidian","memory","continuity","daily-notes","knowledge-management","pkm"]
 }
