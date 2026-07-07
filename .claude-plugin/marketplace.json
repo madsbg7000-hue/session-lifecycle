@@ -1,0 +1,11 @@
+{
+  "name": "session-lifecycle-marketplace",
+  "owner": { "name": "Mads Graversen" },
+  "plugins": [
+    {
+      "name": "session-lifecycle",
+      "source": "./",
+      "description": "Cross-session memory for your AI assistant over an Obsidian vault: setup, start, track, close, handoff."
+    }
+  ]
+}

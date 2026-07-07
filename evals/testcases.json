@@ -1,0 +1,87 @@
+[
+  {
+    "id": "tc-01",
+    "name": "Session files land in the active project folder",
+    "description": "Session files go to [PROJECT_DIR] resolved from config, not a fixed dump folder",
+    "assertions": [
+      "Step 2 reflection is written to [PROJECT_DIR]",
+      "Step 3 log is written to [PROJECT_DIR]",
+      "Step 4 STATE is written to [PROJECT_DIR]",
+      "Step 5 NEXT-SESSION-STARTER is written to [PROJECT_DIR]",
+      "Step 6 daily note is always written to the fixed Daily folder"
+    ]
+  },
+  {
+    "id": "tc-02",
+    "name": "Session-start reads from the active project folder",
+    "description": "Start reads STATE and NEXT-SESSION-STARTER from the resolved project folder",
+    "assertions": [
+      "STATE is read from [PROJECT_DIR]/STATE.md",
+      "NEXT-SESSION-STARTER is read from [PROJECT_DIR]/NEXT-SESSION-STARTER.md",
+      "Daily notes are read from the fixed Daily folder"
+    ]
+  },
+  {
+    "id": "tc-03",
+    "name": "Every close step runs",
+    "description": "Close never skips a step, whatever the vault state",
+    "assertions": [
+      "The final response shows the full step checklist",
+      "No step is skipped citing a missing folder/vault or 'already done'",
+      "Step 0 (resolve project folder) runs before Step 1"
+    ]
+  },
+  {
+    "id": "tc-04",
+    "name": "Frontmatter on every file",
+    "description": "Every file written to the vault carries correct YAML frontmatter",
+    "assertions": [
+      "Reflection has date, type, session_type, tags",
+      "Log has date, type, tags",
+      "STATE has type, updated",
+      "NEXT-SESSION-STARTER has date, type, focus, tags",
+      "Daily note has type, date, tags"
+    ]
+  },
+  {
+    "id": "tc-05",
+    "name": "No hardcoded personal folders",
+    "description": "The plugin resolves folders from config; it hardcodes no user-specific destinations",
+    "assertions": [
+      "session-close resolves [PROJECT_DIR] from config, not a hardcoded path",
+      "session-start resolves [PROJECT_DIR] from config, not a hardcoded path",
+      "shared-context explains config-driven, context-aware placement"
+    ]
+  },
+  {
+    "id": "tc-06",
+    "name": "Idempotency — steps run even if a file was written earlier",
+    "description": "A file touched earlier in the session is still executed fresh in the close pass",
+    "assertions": [
+      "Close explicitly states 'already written earlier' is NOT a valid skip reason",
+      "Every close step must execute/verify fresh content even if the file was touched earlier",
+      "The checklist does not invite ticking [x] without producing the artifact in the close pass"
+    ]
+  },
+  {
+    "id": "tc-07",
+    "name": "Session-track - buffer discipline",
+    "description": "Track writes no files; items held in a session buffer until close",
+    "assertions": [
+      "Track does NOT write files; items are held in a session buffer until close",
+      "Each tracked item captures what / result / decisions / problems",
+      "The confirmation response is short and states the running item count"
+    ]
+  },
+  {
+    "id": "tc-08",
+    "name": "Session-handoff - safe, placed, bounded",
+    "description": "Handoff redacts sensitive info, is placed correctly, and is bounded",
+    "assertions": [
+      "Sensitive info (keys, passwords, tokens, PII) is redacted before writing",
+      "The handoff is written to [PROJECT_DIR]/handoffs/ with correct frontmatter (date, type: handoff, focus, tags)",
+      "A length bound (under 200 lines) and 'link, do not duplicate' are stated",
+      "Exactly one handoff per invocation; wiki-links are flat [[name]]"
+    ]
+  }
+]

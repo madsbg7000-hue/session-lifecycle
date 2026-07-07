@@ -1,0 +1,8 @@
+{
+  "plugin": "session-lifecycle",
+  "version": "1.0.0",
+  "eval_type": "static-instruction-analysis",
+  "total_testcases": 8,
+  "total_assertions": 29,
+  "methodology": "Read the plugin instructions as a model would and judge whether they unambiguously lead to correct behavior for each assertion. Grade in a separate context (an adversarial grader that has not seen the optimization intent). Freeze this matrix and testcases.json before running an improvement loop; change only the command files, one change per iteration."
+}
