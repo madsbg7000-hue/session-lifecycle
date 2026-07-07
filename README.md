@@ -57,7 +57,7 @@ That's the whole loop.
 
 Each close writes to **the active project's folder**, not one shared dump. A
 config note (`_session-lifecycle/config.md`, created at setup) maps *session
-context* to *folder*: job-search notes go one place, research notes another. You
+context* to *folder*: client-work notes go one place, research notes another. You
 own that mapping and can edit it any time.
 
 ### What a close writes

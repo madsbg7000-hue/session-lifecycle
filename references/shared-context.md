@@ -9,7 +9,7 @@ reliable. Keep it open while a command runs.
 ## 1. Where session files live (context-aware placement)
 
 Session files are written to **the active project's folder** — not to one fixed
-dump folder. A job-search session and a research session should not pile their
+dump folder. A client-work session and a research session should not pile their
 notes in the same place.
 
 The mapping from *session context* to *project folder* is defined by you in a
@@ -23,7 +23,7 @@ That file holds a simple table, for example:
 
 | When the session is about... | Write session files to... |
 |------------------------------|---------------------------|
-| Job search                   | `Areas/Job-Search/`       |
+| Client work                  | `Areas/Client-Work/`      |
 | Research                     | `Areas/Research/`         |
 | This vault / product build   | `Projects/Product/`       |
 | Anything else / unclear      | ask me                    |

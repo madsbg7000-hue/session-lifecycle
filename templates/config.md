@@ -14,7 +14,7 @@ to resolve `[PROJECT_DIR]`. Edit it freely — add rows as you add projects.
 
 | When the session is about... | Write session files to... |
 |------------------------------|---------------------------|
-| [Project A, e.g. Job search] | `Projects/Job-Search/`    |
+| [Project A, e.g. Client work]| `Projects/Client-Work/`   |
 | [Project B, e.g. Research]   | `Projects/Research/`      |
 | [This vault / product]       | `Projects/Product/`       |
 | Anything else / unclear      | ask me                    |

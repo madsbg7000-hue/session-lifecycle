@@ -71,7 +71,7 @@ Skipped (already existed):
   <vault>/Daily/            (found existing daily notes)
 
 Context -> folder mapping:
-  Job search  -> Projects/Job-Search/
+  Client work -> Projects/Client-Work/
   Research    -> Projects/Research/
 
 Next: run /session-start to get your first briefing, or just start working and
